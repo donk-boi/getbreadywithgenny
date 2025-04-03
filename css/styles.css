@@ -1,0 +1,336 @@
+/* Resetting some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Base Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Roboto:wght@400;500;700&display=swap');
+
+/* Earthy Color Palette */
+:root {
+    --primary-color: #6d4c41; /* Dark earthy brown */
+    --secondary-color: #efebe9; /* Soft beige */
+    --accent-color: #a1887f; /* Medium brownish-grey */
+    --dark-color: #3e2723; /* Deep brown for text */
+    --light-color: #f1f1f1; /* Light background color */
+    --button-color: #a1887f; /* Soft accent for buttons */
+    --button-hover-color: #3e2723; /* Hover effect for buttons */
+    --link-color: #3e2723; /* Link color */
+    --social-button-color: #3e2723; /* Dark color for social buttons */
+}
+
+/* Apply earthy colors */
+body {
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+header, footer {
+    background-color: var(--primary-color);
+}
+
+button, a {
+    color: var(--dark-color);
+    background-color: var(--button-color);
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    font-weight: 500;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover, a:hover {
+    background-color: var(--button-hover-color);
+}
+
+/* Global Layout and Spacing */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+header, footer, section {
+    margin-bottom: 3rem;
+}
+
+section {
+    padding: 3rem 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h1, h2, h3 {
+    font-family: 'Quicksand', sans-serif;
+    color: var(--dark-color);
+    text-align: center;
+}
+
+p, li {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* Hero Section */
+#hero {
+    text-align: center;
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #efebe9, #a1887f);
+}
+
+#hero h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding-left: 0;
+    margin: 2rem 0; /* Increased margin between header and nav */
+}
+
+nav ul li {
+    margin: 0 30px;
+}
+
+nav ul li a {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    color: #fff;
+    text-align: center;
+}
+
+/* Card Layout for Menu Items */
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.menu-item {
+    width: 80%; /* Make the cards wider */
+    max-width: 600px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.menu-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.menu-item h3 {
+    font-size: 1.8rem;
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+}
+
+.menu-item .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+p, li {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    color: var(--dark-color);
+}
+
+/* Animation on Load */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+section, .menu-item {
+    opacity: 0;
+    animation: fadeIn 1.2s ease-out forwards;
+}
+
+section.visible, .menu-item.visible {
+    opacity: 1;
+}
+
+/* Gradient Backgrounds */
+#hero {
+    background: linear-gradient(135deg, #efebe9, #a1887f);
+}
+
+footer {
+    background: linear-gradient(135deg, #a1887f, #efebe9);
+}
+
+/* Contact Form Styles */
+#contact {
+    background-color: #fff;
+    padding: 3rem 0;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    color: var(--dark-color);
+    margin-bottom: 1.5rem;
+}
+
+#contact p {
+    font-size: 1.2rem;
+    color: var(--dark-color);
+    margin-bottom: 2rem;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    text-align: left;
+    width: 100%;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Updated Button Styles for Form */
+form button {
+    padding: 1rem 2rem;
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+form button:hover {
+    background-color: var(--button-hover-color);
+}
+
+/* Contact Info Styles */
+#contact-info {
+    margin-top: 2rem;
+}
+
+#contact-info h3 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+#contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+#contact-info ul li {
+    font-size: 1.2rem;
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+}
+
+#contact-info ul li a {
+    color: var(--dark-color);
+    text-decoration: none;
+}
+
+#contact-info ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Navigation - List of Buttons (No Hamburger Button) */
+@media (max-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 2rem; /* Increased spacing between header and nav buttons */
+        background-color: var(--primary-color);
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 15px 0; /* Added space between buttons */
+    }
+
+    nav ul li a {
+        font-size: 1.5rem;
+        padding: 1rem 2rem;
+        color: #fff;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    #hero h2 {
+        font-size: 2rem;
+    }
+}
