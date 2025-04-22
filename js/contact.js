@@ -11,8 +11,6 @@ document.getElementById("contact-form").addEventListener("submit", function(even
         return;
     }
 
-    // You can add AJAX code to send the form data to a server or use a form submission service
     alert("Thank you for contacting us! We’ll get back to you shortly.");
-    // Optionally, you can reset the form after submission
     document.getElementById("contact-form").reset();
 });
